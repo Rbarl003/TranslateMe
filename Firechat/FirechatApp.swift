@@ -4,14 +4,19 @@
 //
 //  Created by Ritch Barlatier on 10/28/26.
 //
-
+import FirebaseCore
 import SwiftUI
 
 @main
-struct FirechatApp: App {
+struct FireChatApp: App {
+
+    init() { // <-- Add an init
+        FirebaseApp.configure() // <-- Configure Firebase app
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TranslationMeView()
         }
     }
 }
